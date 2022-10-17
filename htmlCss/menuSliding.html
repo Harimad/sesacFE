@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menu</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
+		#navbar {
+			display: flex;
+			justify-content: center;
+			position: relative;
+		}
+
+		#navbar p {
+			margin-right: 1rem;
+		}
+
+		#underline {
+			position: absolute;
+			height: 4px;
+			width: 100px;
+			top: 0;
+			left: 0;
+			background-color: pink;
+			transition: 0.5s;
+		}
+
+	</style>
+</head>
+
+<body>
+	<nav id="navbar">
+		<div id="underline"></div>
+		<p><a href="home.html" target="_blank">Home</a></p>
+		<p><a href="mail.html" target="_blank">Mail</a></p>
+		<p><a href="cafe.html" target="_blank">Cafe</a></p>
+		<p>Blog</p>
+		<p>Shopping</p>
+	</nav>
+
+	<script>
+		const $navbarMenus = document.querySelectorAll('#navbar p')
+		const $underline = document.querySelector('#underline')
+
+		$navbarMenus.forEach(menu => {
+			menu.addEventListener('mouseover', underline)
+		})
+
+		function underline(e) {
+			console.dir(e.target)
+			$underline.style.top = e.target.offsetTop + e.target.offsetHeight + 'px'
+			$underline.style.left = e.target.offsetLeft + 'px'
+			$underline.style.width = e.target.offsetWidth + 'px'
+		}
+	</script>
+</body>
+
+</html>
