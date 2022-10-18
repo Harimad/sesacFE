@@ -1,0 +1,116 @@
+<html>
+
+<head>
+	<title>Selector</title>
+	<style>
+		ul b {
+			color: blue;
+		}
+
+		div>b {
+			color: blueviolet;
+		}
+
+		ul>li {
+			color: red;
+		}
+
+		li:hover {
+			list-style: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
+		a:visited {
+			color: green;
+		}
+
+		a:hover {
+			color: blue;
+		}
+
+		input[type="checkbox"]+label {
+			color: red
+		}
+
+		input[type="checkbox"]:checked+label {
+			color: blueviolet;
+		}
+
+		.box input[type="checkbox"]:first-child+label {
+			background-color: blueviolet;
+		}
+
+		.box2 div:nth-child(2) {
+			background-color: chartreuse;
+		}
+
+		.box2 div:nth-child(3) {
+			background-color: darkblue;
+			color: white;
+		}
+
+		.box3 {
+			background-color: blanchedalmond;
+		}
+
+		.box3::after {
+			content: '1';
+			display: block;
+			background-color: gainsboro;
+			border-bottom: 2px solid salmon;
+		}
+
+		.title::first-letter {
+			color: aquamarine;
+		}
+
+	</style>
+</head>
+
+<body class="main">
+	<h3 class="title">Web Programming</h3>
+	<hr>
+	<div>
+		<div>2학기<b>학습내용</b></div>
+		<ul id="list">
+			<li>HTML5</li>
+			<li><b>CSS</b></li>
+			<li>JAVASCRIPT</li>
+		</ul>
+		<div class="warning">60점이하는F!</div>
+	</div>
+
+	<a href="#">Link</a>
+	<br>
+	<label for="userId">ID:</label>
+	<input type="text" id="userId">
+	<br>
+	<label for="userPw">PW:</label>
+	<input type="password" is="iserPw">
+
+	<h1>Input 요소의 스타일 설정</h1>
+	<div class="box">
+		<input type="checkbox" name="lang" id="html"><label for="html">HTML</label>
+		<input type="checkbox" name="lang" id="css"><label for="css">CSS</label>
+		<input type="checkbox" name="lang" id="js"><label for="js">JS</label>
+	</div>
+
+	<div class="box2">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+
+	<h1>가상 요소 선택자</h1>
+
+	<h3>Web Programming</h3>
+
+
+	<div class="box3">1</div>
+</body>
+
+</html>

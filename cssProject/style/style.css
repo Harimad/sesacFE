@@ -1,0 +1,20 @@
+body {
+  background-color: aquamarine;
+  color: blueviolet;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin: 0 3rem;
+}
+
+h3 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+hr {
+  border: 5px solid yellowgreen;
+}
+
+span {
+  /* color: goldenrod; */
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>pseudo-element</title>
+	<style>
+		.main h3 {
+			color: brown;
+		}
+
+		.main h3::first-letter {
+			color: red;
+		}
+
+		.content b {
+			background-color: yellow;
+		}
+
+		#list li::marker {
+			color: red;
+		}
+
+		#list li:first-child {
+			color: green;
+		}
+
+		#list li:nth-child(2) {
+			background-color: green;
+			color: white;
+		}
+
+		#list li:last-child {
+			color: chocolate;
+		}
+
+		.warning {
+			color: red;
+		}
+
+	</style>
+</head>
+
+<body class="main">
+	<h3>Web Programming👍</h3>
+	<hr>
+	<div>
+		<div class="content">2학기 <b>학습 내용</b>입니다.</div>
+	</div>
+	<ul id="list">
+		<li><span>HTML5</span></li>
+		<li><b>CSS</b></li>
+		<li>JAVASCRIPT</li>
+	</ul>
+	<div class="warning">60점 이하는 F</div>
+
+	<li><span>HTML5</span></li>
+	<li><b>CSS</b></li>
+	<li>JAVASCRIPT</li>
+	<div class="warning">60점 이하는 F</div>
+</body>
+
+</html>
