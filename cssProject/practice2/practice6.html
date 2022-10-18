@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div {
+			border: 3px solid #008000;
+		}
+
+		/* p:nth-child(2n) {
+			color: red;
+			font-weight: bold;
+		} */
+		p:nth-last-child(3) {
+			color: red;
+		}
+
+		p:nth-last-child(6) {
+			color: red;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>:nth-last-child를이용한선택</h1>
+	<hr>
+	<div>
+		<p>이 p 태그는div 태그의 뒤에서 여섯번째 child 입니다!</p>
+		<p>이 p 태그는div 태그의 뒤에서 세번째 child 입니다!</p>
+		<p>이 p 태그는div 태그의 뒤에서 다섯번째 child 입니다!</p>
+		<p>이 p 태그는div 태그의 뒤에서 네번째 child 입니다!</p>
+		<p>이 p 태그는div 태그의 뒤에서 두번째 child 입니다!</p>
+		<p>이 p 태그는div 태그의 뒤에서 첫번째 child 입니다!</p>
+	</div>
+</body>
+
+</html>

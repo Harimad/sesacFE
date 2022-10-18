@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		input {
+			border: 3px solid green;
+			width: 300px;
+			padding: 10px;
+			outline: none;
+			/*input태그의기본스타일무시*/
+		}
+
+		input:focus {
+			border: 3px solid red;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>input 요소의스타일설정</h1>
+	<hr>
+	<form> 아래의입력양식을마우스로클릭해보세요!
+		<br><br>
+		<input type="text" id="email" name="email" value="마우스로클릭해보세요!">
+	</form>
+</body>
+
+</html>

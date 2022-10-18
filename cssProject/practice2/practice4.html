@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div.first {
+			border: 3px solid green;
+			width: 600px;
+		}
+
+		div.second {
+			border: 3px solid orange;
+			width: 600px;
+		}
+
+		.first p:first-child,
+		.second p:first-child {
+			color: red;
+		}
+
+		.second p:last-child {
+			color: blue;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>구조가상클래스선택자</h1>
+	<hr>
+	<div class="first">
+		<p>이p 태그는div 태그의첫번째child 입니다!</p>
+		<p>이p 태그는div 태그의child 입니다!</p>
+		<p>이p 태그는div 태그의child 입니다!</p>
+		<div class="second">
+			<p>이p 태그는div 태그의첫번째child 입니다!</p>
+			<p>이p 태그는div 태그의child 입니다!</p>
+			<p>이p 태그는div 태그의마지막child 입니다!</p>
+		</div>
+	</div>
+</body>
+
+</html>
