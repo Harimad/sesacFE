@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		h1 {
+			font-family: 'Consolas';
+		}
+
+		p {
+			font-family: 'Times New Roman', Times, serif;
+		}
+
+		div p:first-child {
+			font-weight: 900;
+		}
+
+		div p:nth-child(2) {
+			font-weight: 100;
+		}
+
+		div p:nth-child(3) {
+			font-style: italic;
+		}
+
+		div p:last-child {
+			font-size: large;
+		}
+
+		p>span {
+			font-size: 1.5em;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>Consolas font</h1>
+	<hr>
+	<div>
+		<p>font-weight 900</p>
+		<p>font-weight 100</p>
+		<p>Italic Style</p>
+		<p>현재 크기의 <span>1.5배</span> 크기로</p>
+	</div>
+</body>
+
+</html>

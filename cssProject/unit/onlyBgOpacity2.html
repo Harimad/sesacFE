@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ChangingBgImageOpcity in CSS without affecting text</title>
+	<style>
+		.hero {
+			position: relative;
+			height: 100vh;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.hero::before {
+			content: "";
+			background-image: url('http://placekitten.com/1200/800');
+			position: absolute;
+			background-size: cover;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			opacity: 0.75;
+		}
+
+		h1 {
+			position: relative;
+			color: #ffffff;
+			font-size: 14rem;
+			line-height: 0.9;
+			text-align: center;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="hero">
+		<h1>Cute kittens everywhere!</h1>
+	</div>
+</body>
+
+</html>
