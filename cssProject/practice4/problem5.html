@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#img {
+			width: 100px;
+			height: 140px;
+			background-image: url('http://placekitten.com/100/140');
+			transform: rotateY(180deg);
+			transition: 1.5s;
+		}
+
+		#img:hover {
+			transform: rotateY(0deg);
+		}
+
+	</style>
+</head>
+
+<body>
+	<h3>:hover 활용</h3>
+	<hr>
+	<table>
+		<tr>
+			<td>마우스를올리면카드의앞면이보인다.</td>
+			<td>
+				<div id="img"></div>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

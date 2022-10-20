@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#box {
+			width: 100px;
+			height: 100px;
+			background-color: aquamarine;
+			position: relative;
+			z-index: 2;
+			/* left: 100px; */
+			/* top: 100px; */
+
+			/* visibility: hidden; */
+		}
+
+		#box:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: transparent;
+			box-shadow: -50px 80px 4px 10px rgba(232, 233, 232, 0.7);
+			/* animation: shadowRotation 5s linear 0s infinite; */
+			z-index: 1;
+		}
+
+		@keyframes shadowRotation {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="box">
+		<div>content</div>
+	</div>
+</body>
+
+</html>
