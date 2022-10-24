@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.box {
+			width: 300px;
+			height: 50px;
+			background-color: red;
+			margin-bottom: 3rem;
+		}
+
+		.fixed1 {
+			position: fixed;
+			top: 120px;
+			left: 120px;
+			background-color: orange;
+		}
+
+		.fixed2 {
+			position: fixed;
+			top: 230px;
+			left: 120px;
+			background-color: skyblue;
+			z-index: -1;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>z-index 속성을 이용한 노출 순서 변경</h1>
+	<hr>
+	<div class="box">정적 위치(static position)</div>
+	<div class="box fixed1">1번 고정 위치(fixed position)</div>
+	<div class="box">정적 위치(static position)</div>
+	<div class="box fixed2">2번 고정 위치(fixed position)</div>
+</body>
+
+</html>

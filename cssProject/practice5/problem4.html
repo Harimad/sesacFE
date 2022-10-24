@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.container {
+			position: relative;
+		}
+
+		.box {
+			position: absolute;
+		}
+
+		.box1 {
+			top: 10px;
+			left: 10px;
+		}
+
+		.box2 {
+			top: 50px;
+			left: 90px;
+		}
+
+		.box3 {
+			top: 90px;
+			left: 170px;
+		}
+
+		.box4 {
+			top: 130px;
+			left: 250px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>z-index 프로퍼티</h1>
+	<hr>
+	<div class="container">
+		<div class="box box1">
+			<img src="http://placekitten.com/200/300" alt="">
+		</div>
+		<div class="box box2">
+			<img src="http://placekitten.com/200/301" alt="">
+		</div>
+		<div class="box box3">
+			<img src="http://placekitten.com/200/299" alt="">
+		</div>
+		<div class="box box4">
+			<img src="http://placekitten.com/201/300" alt="">
+		</div>
+	</div>
+</body>
+
+</html>

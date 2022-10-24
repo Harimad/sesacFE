@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.box1 {
+			position: static;
+			border: 1px solid green;
+		}
+
+		.box2 {
+			position: relative;
+			left: 30px;
+			border: 1px solid red;
+			margin: 10px 0
+		}
+
+		.box3 {
+			position: static;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>상대 위치(relative position) 지정 방식</h1>
+	<hr>
+	<div class="box1">
+		이 요소는 정적 위치 지정 방식으로 위치를 설정하였습니다.
+	</div>
+	<div class="box2">
+		이 요소는 상대 위치 지정 방식으로 위치를 설정한 후, left 속성값을 30px로 설정하였습니다.
+	</div>
+	<div class="box3">
+		상대 위치는 해당 HTML 요소의 정적 위치(static position)에 따라 위치를 재조정하는 방식입니다!
+	</div>
+</body>
+
+</html>
