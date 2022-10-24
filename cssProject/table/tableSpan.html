@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		table {
+			border: 1px solid black;
+			border-collapse: collapse;
+			text-align: center;
+			width: 500px;
+		}
+
+		th,
+		td {
+			border: 1px solid red;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h3>기본 구조를 가진 테이블 + colspan, rowspan</h3>
+	<hr>
+	<table>
+		<caption>1학기 성적</caption>
+		<thead>
+			<tr>
+				<th>이름</th>
+				<th>HTML</th>
+				<th>CSS</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>John</td>
+				<td>100</td>
+				<td>99</td>
+			</tr>
+			<tr>
+				<td>Doe</td>
+				<td>80</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td>Jack</td>
+				<td>90</td>
+				<td>70</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>총점</td>
+				<td colspan="2">!!</td>
+			</tr>
+			<tr>
+				<!-- <td>DD</td> -->
+				<td rowspan="2">DD</td>
+				<td>SS</td>
+				<td>BB</td>
+			</tr>
+			<tr>
+				<td>SS</td>
+				<td>BB</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+
+</html>

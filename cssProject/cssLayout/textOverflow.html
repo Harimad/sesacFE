@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>text overflow ellipsis</title>
+	<style>
+		h1,
+		p {
+			border: 1px solid red;
+			width: 300px;
+		}
+
+		.ellipsis {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1 class="ellipsis">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur tenetur necessitatibus
+		asperiores doloribus cum a iste, beatae magnam laboriosam! Harum fugit magni qui, aut officia quae vero incidunt
+		modi!</h1>
+	<hr>
+	<p class="ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quia earum laboriosam placeat,
+		maiores fugiat adipisci incidunt dolorum nemo nesciunt voluptatibus aspernatur impedit labore quam dignissimos
+		commodi at nisi minus.</p>
+</body>
+
+</html>
