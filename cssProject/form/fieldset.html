@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		input[type=text]:hover {
+			background-color: blueviolet;
+		}
+
+		input[type=text]:focus {
+			font-size: 2rem;
+		}
+
+	</style>
+</head>
+
+<body>
+	<form>
+		<fieldset>
+			<legend>Choose your favorite monster</legend>
+
+			<input type="radio" id="kraken" name="monster" value="K">
+			<label for="kraken">Kraken</label><br>
+
+			<input type="radio" id="sasquatch" name="monster" value="S">
+			<label for="sasquatch">Sasquatch</label><br>
+
+			<input type="radio" id="mothman" name="monster" value="M" />
+			<label for="mothman">Mothman</label>
+		</fieldset>
+	</form>
+	<input type="text" class="userinput" placeholder="hello world" readonly>
+
+</body>
+
+</html>
