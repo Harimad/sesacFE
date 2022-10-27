@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.header {
+			background-color: aqua;
+			height: 150px;
+			text-align: center;
+			line-height: 150px;
+		}
+
+		.container {
+			display: flex;
+			height: 400px;
+		}
+
+		.box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.first {
+			background-color: bisque;
+			flex: 1;
+		}
+
+		.second {
+			background-color: chartreuse;
+			flex: 2;
+		}
+
+		.third {
+			background-color: coral;
+			flex: 1;
+		}
+
+		.footer {
+			background-color: blueviolet;
+			height: 150px;
+			text-align: center;
+			line-height: 150px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<p>Header</p>
+	</div>
+	<div class="container">
+		<div class="box first">
+			<p>
+				First Content
+			</p>
+		</div>
+		<div class="box second">
+			<p>
+				Second Content
+			</p>
+		</div>
+		<div class="box third">
+			<p>
+				Thrid Content
+			</p>
+		</div>
+	</div>
+	<div class="footer">
+		<p>footer</p>
+	</div>
+</body>
+
+</html>
