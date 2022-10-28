@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			height: 100vh;
+		}
+
+		.parent {
+			display: grid;
+			grid-template-rows: 1fr 5fr 1fr;
+			grid-template-areas:
+				"box1 box1 box1"
+				"box2 box3 box4"
+				"box5 box5 box5"
+			;
+			height: 100%;
+		}
+
+		.child {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 2rem;
+			font-weight: 900;
+		}
+
+		.box1 {
+			grid-area: box1;
+			background-color: antiquewhite;
+		}
+
+		.box2 {
+			grid-area: box2;
+			background-color: aqua;
+		}
+
+		.box3 {
+			grid-area: box3;
+			background-color: bisque;
+		}
+
+		.box4 {
+			grid-area: box4;
+			background-color: yellow;
+		}
+
+		.box5 {
+			grid-area: box5;
+			background-color: turquoise;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="parent">
+		<div class="child box1">1</div>
+		<div class="child box2">2</div>
+		<div class="child box3">3</div>
+		<div class="child box4">4</div>
+		<div class="child box5">5</div>
+	</div>
+</body>
+
+</html>
