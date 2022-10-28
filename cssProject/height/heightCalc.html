@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Layout - height</title>
+	<style>
+		:root {
+			--headerFooter-height: 100px;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			height: 100vh;
+		}
+
+		.container {
+			background-color: antiquewhite;
+		}
+
+		header {
+			background-color: aqua;
+			height: var(--headerFooter-height);
+		}
+
+		section {
+			background-color: bisque;
+			display: flex;
+			height: calc(100vh - var(--headerFooter-height)*2);
+		}
+
+		.left {
+			flex: 1;
+			background-color: chocolate;
+		}
+
+		.main {
+			flex: 2;
+			background-color: cadetblue;
+		}
+
+		.right {
+			flex: 3;
+			background-color: darkgoldenrod;
+		}
+
+		footer {
+			background-color: burlywood;
+			height: var(--headerFooter-height);
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<header>Header</header>
+		<section>
+			<div class="left">Left</div>
+			<div class="main">Left</div>
+			<div class="right">Left</div>
+		</section>
+		<footer>Footer</footer>
+	</div>
+</body>
+
+</html>

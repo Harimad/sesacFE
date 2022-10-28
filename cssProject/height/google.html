@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		:root {
+			/* color */
+			--white-color: #fff;
+			--black-color: #202020;
+			--blue-color: #4284F4;
+			--red-color: #EA4435;
+			--yellow-color: #FABC04;
+			--green-color: #34A854;
+			--gray-color: #dfe1e5;
+			--light-gray-color: #F8F9FA;
+			--light-skyblue-color: #4284F4;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo {
+			font-size: 5rem;
+			font-weight: 900;
+			margin-bottom: 1rem;
+			letter-spacing: -6px;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		}
+
+		.logo p span:first-child {
+			color: var(--blue-color);
+		}
+
+		.logo p span:nth-child(2) {
+			color: var(--red-color);
+		}
+
+		.logo p span:nth-child(3) {
+			color: var(--yellow-color);
+		}
+
+		.logo p span:nth-child(4) {
+			color: var(--blue-color);
+		}
+
+		.logo p span:nth-child(5) {
+			color: var(--green-color)
+		}
+
+		.logo p span:last-child {
+			color: var(--red-color);
+		}
+
+		.input-box {
+			text-align: center;
+			width: 100%;
+		}
+
+		.userInput {
+			width: 100%;
+			max-width: 582px;
+			border-radius: 20px;
+			padding: 0.6rem;
+		}
+
+		.userInput:hover {
+			outline: none;
+		}
+
+		.button-box {
+			display: flex;
+			justify-content: center;
+			margin-top: 0.7rem;
+		}
+
+		.button-box button {
+			background-color: transparent;
+			border-color: var(--red-color);
+			margin-right: 0.4rem;
+			padding: 0.6rem;
+			border-radius: 10px;
+		}
+
+		.button-box button:hover {
+			background-color: var(--blue-color);
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="logo">
+			<p>
+				<span>G</span>
+				<span>o</span>
+				<span>o</span>
+				<span>g</span>
+				<span>l</span>
+				<span>e</span>
+			</p>
+		</div>
+		<div class="input-box">
+			<form action="https://www.google.com/search?" method="GET" target="_blank">
+				<input type="text" id="userInput" class="userInput" name="q" />
+				<br>
+				<div class="button-box">
+					<button type="submit" class="searchBtn">Google 검색</button>
+					<button type="reset">I'm Feeling Lucky</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+
+</html>

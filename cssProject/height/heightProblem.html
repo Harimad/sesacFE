@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Layout - height</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			height: 100vh;
+		}
+
+		.container {
+			background-color: antiquewhite;
+		}
+
+		header {
+			background-color: aqua;
+			height: 100px;
+		}
+
+		section {
+			background-color: bisque;
+			display: flex;
+			/* height: calc(100vh - 200px); */
+		}
+
+		.left {
+			flex: 1;
+			background-color: chocolate;
+		}
+
+		.main {
+			flex: 2;
+			background-color: cadetblue;
+		}
+
+		.right {
+			flex: 3;
+			background-color: darkgoldenrod;
+		}
+
+		footer {
+			background-color: burlywood;
+			height: 100px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<header>Header</header>
+		<section>
+			<div class="left">Left</div>
+			<div class="main">Left</div>
+			<div class="right">Left</div>
+		</section>
+		<footer>Footer</footer>
+	</div>
+</body>
+
+</html>
