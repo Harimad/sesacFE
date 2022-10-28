@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grid</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.parent {
+			display: grid;
+			/* grid-template-columns: 200px 200px 200px; */
+			/* grid-template-rows: 100px 100px; */
+
+
+			/* fr 사용 */
+			/* grid-template-columns: 1fr 1fr; */
+			/* grid-template-rows: 1fr 2fr 1fr; */
+
+
+			/* repeat 사용 */
+			/* grid-template-columns: repeat(3, 200px); */
+			/* grid-template-rows: repeat(2, 100px); */
+
+			/* grid-template-columns: 100px, repeat(2, 200px), 100; */
+
+			/* grid-template-columns: repeat(3, 1fr); */
+			/* grid-template-rows: repeat(2, 1fr); */
+
+
+			/* minmax() 함수 */
+			/* grid-template-columns: 1fr 1fr; */
+			/* grid-template-columns: minmax(100px, auto); */
+			/* grid-template-rows: repeat(3, minmax(100px, auto)); */
+			/* grid-auto-rows: 100px; */
+			/* grid-auto-rows: minmax(100px, auto); */
+
+			grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+			/* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+			grid-auto-rows: minmax(100px, auto);
+			/* grid-template-rows: minmax(100px, auto); */
+
+			/* 간격 조정 */
+			/* row-gap: 10px; */
+			/* column-gap: 20px; */
+			/* gap: 10px 20px; */
+			gap: 10px;
+			padding: 10px;
+
+			background-color: bisque;
+		}
+
+		.child {
+			border: 1px solid black;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+	</style>
+</head>
+
+<body>
+	<!-- 부모 컨테이너에 grid로 큰 틀 잡기 -->
+	<!-- 자식 영역은 flex로 배치 하기 -->
+	<div class="parent">
+		<div class="child">1</div>
+		<div class="child">2</div>
+		<div class="child">3</div>
+		<div class="child">4</div>
+		<div class="child">5</div>
+		<div class="child">6</div>
+	</div>
+</body>
+
+</html>

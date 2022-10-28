@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			.container {
+				display: grid;
+				grid-template-columns: 200px 200px 500px;
+				/* grid-template-columns: 1fr 1fr 1fr */
+				/* grid-template-columns: repeat(3, 1fr) */
+				/* grid-template-columns: 200px 1fr */
+				/* grid-template-columns: 100px 200px auto */
+
+				grid-template-rows: 200px 200px 500px;
+				/* grid-template-rows: 1fr 1fr 1fr */
+				/* grid-template-rows: repeat(3, 1fr) */
+				/* grid-template-rows: 200px 1fr */
+				/* grid-template-rows: 100px 200px auto */
+
+
+				/*
+				그리드 형태를 자동으로 정의
+				grid-auto-columns grid-auto-rows
+				grid-template-columns(또는 grid-template-rows)의 통제를 벗어난 위치에 있는 트랙의 크기를 지정하는 속성이에요.
+				속성 이름이 헷갈린다면 -template- 자리에 – auto-가 들어간다고 생각하세요~
+				*/
+				grid-template-rows: repeat(3, minmax(100px, auto));
+				/* grid-auto-rows: minmax(100px, auto); */
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<!-- 부모: Grid Container(그리드 컨테이너), 자식: Grid Item(그리드 아이템) -->
+		<div class="container">
+			<div class="item">A</div>
+			<div class="item">B</div>
+			<div class="item">C</div>
+			<div class="item">D</div>
+			<div class="item">E</div>
+			<div class="item">F</div>
+			<div class="item">G</div>
+			<div class="item">H</div>
+			<div class="item">I</div>
+		</div>
+	</body>
+
+	</html>
+
+</body>
+
+</html>
