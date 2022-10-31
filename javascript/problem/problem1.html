@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// 1
+		var x = 5;
+		var y = 3;
+		var z = x + y;
+		console.log(z); // 8
+
+		// 2
+		var x = 10;
+		var y = 5;
+		var z = x - y;
+		console.log(z) // 5
+
+		// 3
+		var x = 2;
+		var y = 5;
+		var z = x * y;
+		console.log(z) // 10
+
+		// 4
+		var x = 5;
+		var y = 2;
+		var z = 5 / 2;
+		console.log(z); // 2.5
+
+		// 5
+		var x = 15;
+		var y = 4;
+		var z = 15 % 4;
+		console.log(z); // 3
+
+		// 6
+		var x = 5;
+		var y = ++x;
+		console.log(y); // 6
+
+		// 7
+		var x = 5;
+		var y = --x;
+		console.log(y); // 4
+
+		// 8
+		var str1 = '자바스크립트';
+		var str2 = '첫 번째 실습';
+		var str3 = str1.concat(str2);
+		console.log(str3); // 자바스크립트첫 번째 실습
+
+		// 9
+		var x = 'Hello';
+		var y = 123;
+		var z = x + y;
+		console.log(z); // Hello123
+
+		// 10
+		var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		console.log(str.length); // 26
+
+		// 11
+		var str1 = "Hello, Java";
+		var str2 = str1.replace("Java", "JavaScript")
+		console.log(str2); // Hello, JavaScript
+
+		// 12
+		console.log('hello, javascript'.toUpperCase()); // HELLO, JAVASCRIPT
+
+		// 13
+		var str = 'a,b,c,d,e,g';
+		var newArr = str.split(',');
+		console.log(newArr[1]); // b
+
+		// 14
+		// var x = 32;
+		// var total = 100 + x * 2 / 4 - 3;
+		// var div = x / 10;
+		// var mod = x % 2;
+		// document.write('<div>');
+		// document.write(`
+		// x = ${x}<br>
+		// 100 + x*2/4 - 3 = ${total}<br>
+		// x/10 = ${div}<br>
+		// x%2 = ${mod}
+		// `);
+		// document.write('</div>');
+
+		// 15
+		// var x = 3;
+		// var y = 3;
+		// var z = 3;
+
+		// document.write('<div>');
+		// document.write(`
+		// x=${x}, y=${y}, z=${z}<br><br>
+		// x += 3 실행 후, x=${x + 3}<br>
+		// y *= 3 실행 후, y=${y * 3}<br>
+		// z %= 2 실행 후, z=${z % 2}
+		// `);
+		// document.write('</div>');
+
+		// 16
+		// var x = 13;
+		// var y = 7;
+		// document.write('<div>');
+		// document.write(`
+		// x = ${x}, y = ${y}<br><br>
+		// x == y : ${x == y}<br>
+		// x != y : ${x != y}<br>
+		// x >= y : ${x >= y}<br>
+		// x > y : ${x > y}<br>
+		// x <= y : ${x <= y}<br>
+		// x < y : ${x < y}
+		// `);
+		// document.write('</div>');
+
+		// 17
+		// var x = true;
+		// var y = false;
+		// document.write('<div>');
+		// document.write(`
+		// x = ${x}, y = ${y}<br><br>
+		// x && y : ${x && y}<br>
+		// x || y : ${x || y}<br>
+		// !x : ${!x}<br>
+		// (3>2) && (3<4) : ${3 > 2 && 3 < 4}<br>
+		// (3==-2) || (-1<0) : ${3 == -2 || -1 < 0}}
+		// `);
+		// document.write('</div>');
+
+		// 18
+		// var a = 3;
+		// var b = 5;
+		// document.write('<div>');
+		// document.write(`
+		// a = ${a}, b = ${b}<br><br>
+		// 두수의 차이 : ${b - a}
+		// `);
+		// document.write('</div>');
+
+		// 19
+		// document.write('<div>');
+		// document.write(`
+		// ${"abc" + 23}<br>
+		// ${23 + "abc"}<br>
+		// ${23 + "35"}<br>
+		// ${23 + 35}<br>
+		// ${23 + 35 + "abc"}<br>
+		// ${"abc" + 23 + 35}
+		// `);
+		// document.write('</div>');
+
+		// 20
+		// var a = "Boys and Girls";
+		// var b = "!!";
+		// document.write('<div>');
+		// document.write(`
+		// a : ${a}<br>
+		// b : ${b}<br><br>
+		// ${a.charAt(0)}<br>
+		// ${a + b}입니다<br>
+		// ${a.slice(5, 8)}<br>
+		// ${a.toUpperCase()}<br>
+		// ${a.replace("and", "or")}
+		// `);
+		// document.write('</div>');
+	</script>
+</body>
+
+</html>
