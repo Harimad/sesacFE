@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.info {
+			background-color: pink;
+			width: 60%;
+		}
+
+		.messageBox {
+			width: 60%;
+			text-align: center;
+		}
+
+	</style>
+</head>
+
+<body>
+	<script>
+		let height = parseInt(prompt('키를 입력하세요'))
+		while (isNaN(height) || height < 0 || height > 300) {
+			height = parseInt(prompt('키를 입력하세요'))
+		}
+		let weight = parseInt(prompt('몸무게를 입력하세요'))
+		while (isNaN(weight) || weight < 0 || weight > 400) {
+			weight = parseInt(prompt('몸무게를 입력하세요'))
+		}
+
+		let standardWeight = (height - 100) * 0.9
+		let message
+		let color
+
+		if (standardWeight > weight) {
+			message = '저체중입니다'
+			color = 'blue'
+		} else if (standardWeight < weight) {
+			message = '과체중입니다'
+			color = 'red'
+		} else {
+			message = '표준입니다'
+			color = 'green'
+		}
+
+		document.write(`
+  <div class="container">
+    <h3>표준체중 계산기</h3>
+    <div class="info">
+      <p>키: ${height}</p>
+      <p>몸무게 : ${weight}</p>
+      <p>표준체중: ${standardWeight}</p>
+    </div>
+    <div class="messageBox" style="background:${color}">${message}</div>
+  </div>
+`)
+	</script>
+</body>
+
+</html>

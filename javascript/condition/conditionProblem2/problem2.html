@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let userInput1 = parseInt(prompt('첫 번째 숫자를 입력하세요'))
+		while (isNaN(userInput1)) {
+			userInput1 = parseInt(prompt('첫 번째 숫자를 입력하세요'))
+		}
+
+		let userInput2 = parseInt(prompt('두 번째 숫자를 입력하세요'))
+		while (isNaN(userInput2)) {
+			userInput2 = parseInt(prompt('두 번째 숫자를 입력하세요'))
+		}
+
+		let userInput3 = parseInt(prompt('세 번째 숫자를 입력하세요'))
+		while (isNaN(userInput3)) {
+			userInput3 = parseInt(prompt('세 번째 숫자를 입력하세요'))
+		}
+
+		console.log(userInput1, userInput2, userInput3)
+		document.write(`
+		입력한 수 : ${userInput1}, ${userInput2}, ${userInput3}<br>
+		가장 작은 수는 ${Math.min(userInput1, userInput2, userInput3)}입니다.
+		`)
+	</script>
+</body>
+
+</html>

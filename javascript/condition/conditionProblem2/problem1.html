@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+	</style>
+</head>
+
+<body>
+	<script>
+		let year
+		let animal
+		let url
+
+		function yearAnimal() {
+			year = parseInt(prompt('태어난 년도를 입력해 주세요.'))
+			if (isNaN(year) || year > 2022 || year < 1900) {
+				alert('잘못된 입력입니다.')
+				return;
+			}
+			switch (year % 12) {
+				case 0:
+					animal = '원숭이'
+					url = './img/원숭이.png'
+					break
+				case 1:
+					animal = '닭'
+					url = './img/닭.png'
+					break
+				case 2:
+					animal = '개'
+					url = './img/개.png'
+					break
+				case 3:
+					animal = '돼지'
+					url = './img/돼지.png'
+					break
+				case 4:
+					animal = '쥐'
+					url = './img/쥐.png'
+					break
+				case 5:
+					animal = '소'
+					url = './img/소.png'
+					break
+				case 6:
+					animal = '호랑이'
+					url = './img/호랑이.png'
+					break
+				case 7:
+					animal = '토끼'
+					url = './img/토끼.png'
+					break
+				case 8:
+					animal = '용'
+					url = './img/용.png'
+					break
+				case 9:
+					animal = '뱀'
+					url = './img/뱀.png'
+					break
+				case 10:
+					animal = '말'
+					url = './img/말.png'
+					break
+				case 11:
+					animal = '양'
+					url = './img/양.png'
+					break
+				default:
+					break;
+			}
+			document.write(`
+			<div class='container'>
+				<div>
+					<img src=${url}></img>
+				</div>
+				<p>${year}년생은 ${animal}띠 입니다.</p>
+			</div>
+			`)
+			console.log(animal, url)
+		}
+		yearAnimal()
+
+	</script>
+</body>
+
+</html>

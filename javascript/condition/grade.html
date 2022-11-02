@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let grade
+		let score = parseInt(prompt('점수 입력', 0).trim())
+
+		// 입력값 유효성 검사
+		while (isNaN(score) || score > 100 || score < 0) {
+			score = parseInt(prompt('점수 입력', 0).trim())
+		}
+		// 점수 범위 설정(1~10)
+		score = parseInt(score / 10);
+
+		switch (score) {
+			case 10:
+			case 9:
+				grade = 'A'
+				break;
+			case 8:
+				grade = 'B'
+				break;
+			case 7:
+				grade = 'C'
+				break;
+			case 6:
+				grade = 'D'
+				break;
+			default:
+				grade = 'F'
+				break;
+		}
+		console.log(`Your grade is ${grade}`)
+
+	</script>
+</body>
+
+</html>

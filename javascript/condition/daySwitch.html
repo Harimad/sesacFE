@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let day = prompt('요일을 입력하세요').trim()
+		let englishDay
+		switch (day) {
+			case '월':
+				englishDay = 'Monday'
+				break
+			case '화':
+				englishDay = 'Thusday'
+				break
+			case '수':
+				englishDay = 'Wednesday'
+				break
+			case '목':
+				englishDay = 'Thursday'
+				break
+			case '금':
+				englishDay = 'Friday'
+				break
+			case '토':
+				englishDay = 'Saturday'
+				break
+			case '일':
+				englishDay = 'Sunday'
+				break
+			default:
+				document.write(`${day}는 요일이 아닙니다.`)
+				break;
+		}
+		if (englishDay) {
+			document.write(`${day} (${englishDay})`)
+		}
+	</script>
+</body>
+
+</html>
