@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let arrA = ['김', '이', '박']
+		let arrB = ['최']
+		let arrC = arrA.concat(arrB)
+
+		document.write(`
+		배열 a = ${arrA.join(',')}<br>
+		배열 b = ${arrB}<br>
+		<hr>
+		배열 a와 b를 연결해서 새로운 배열 c를 생성<br>
+		배열 c = ${arrA.concat(arrB).join(',')}<br>
+		<hr>
+		배열 a를 다음과 같이 연결<br>
+		${arrA.join('##')}
+		<hr>
+		배열 a를 반대로 출력 reverse()<br>
+		${arrA.reverse().join(',')}<br>
+		<hr>
+		배열 a를 slice해서 다음과 같이 출력<br>
+		${arrA.slice(1, 2)}<br>
+		<hr>
+		배열 a를 정렬 sort()<br>
+		${arrA.sort()}
+		`)
+
+		function printArr(arr) {
+			for (const item of arr) {
+				document.write()
+			}
+		}
+	</script>
+</body>
+
+</html>

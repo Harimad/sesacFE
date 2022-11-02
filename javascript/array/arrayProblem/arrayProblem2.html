@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let temperature = [15.1, 15.4, 16.1, 17.5, 19.2, 21.4]
+		let sum = 0;
+		for (let i = 0; i < temperature.length; i++) {
+			console.log(temperature[i])
+			sum += temperature[i]
+		}
+		document.write(`평균 온도는 ${sum / temperature.length}`)
+	</script>
+</body>
+
+</html>

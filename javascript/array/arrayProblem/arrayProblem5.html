@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let itemlist = ['라면', '계란', '물', '파']
+		document.write(`
+			<h3>라면을 만드는데 필요한 재료</h3>
+			<hr>
+			<ul>
+			${makeList(itemlist)}
+			</ul>
+		`)
+
+		function makeList(arr) {
+			let str = ''
+			for (const item of arr) {
+				str += `<li>${item}</li>`
+			}
+			return str
+		}
+	</script>
+</body>
+
+</html>

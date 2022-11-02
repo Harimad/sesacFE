@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let score = []
+		for (let i = 0; i < 5; i++) {
+			score.push(Math.floor(Math.random() * 101))
+		}
+		document.write(`
+		배열 score 출력<br>
+		${score.join(',')}
+		<hr>
+		score 합계 출력<br>
+		${sumArr(score)}
+		<hr>
+		score 평균 출력<br>
+		${sumArr(score) / score.length}
+		`)
+
+		function sumArr(arr) {
+			let sum = 0;
+			for (const item of arr) {
+				sum += item
+			}
+			return sum
+		}
+	</script>
+</body>
+
+</html>

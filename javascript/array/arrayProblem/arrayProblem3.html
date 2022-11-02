@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let sum = 0;
+		let money = [];
+		money.push(5000)
+		money.push(10000)
+		money.push(30000)
+
+		document.write('배열 money 출력: ')
+		for (let i = 0; i < money.length; i++) {
+			sum += money[i]
+			document.write(`${money[i]}`)
+			if (i !== money.length - 1) {
+				document.write(', ')
+			} else {
+				document.write('<br>')
+			}
+		}
+		document.write(`배열 money 합계: ${sum}`)
+	</script>
+</body>
+
+</html>

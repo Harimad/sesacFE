@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div {
+			display: inline-block;
+			width: 60px;
+			padding: 10px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h3>17 개의 CSS 색이름과 색</h3>
+	<hr>
+	<script>
+		let colorNames = ["maroon", "red", "orange", "yellow", "olive", "purple", "fuchsia", "white", "lime", "green", "navy", "blue", "aqua", "teal", "black", "silver", "gray"];
+		document.write(`${renderArr(colorNames)}`)
+		function renderArr(arr) {
+			let str = ``
+			for (const name of colorNames) {
+				str += `<div style='background:${name}'>${name}</div>`
+			}
+			return str
+		}
+
+	</script>
+</body>
+
+</html>
