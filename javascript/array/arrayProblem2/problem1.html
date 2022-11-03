@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let status = prompt('delete(삭제), shop(쇼핑), buy(구매) 중 하나를 입력해 주세요').trim()
+
+		if (status === 'delete' || status === '삭제') {
+			alert('삭제 하기를 선택하셨습니다.')
+		} else if (status === 'shop' || status === '쇼핑') {
+			alert('쇼핑 계속 하기를 선택하셨습니다.')
+		} else if (status === 'buy' || status === '구매') {
+			alert('구매 하기를 선택하셨습니다.')
+		} else {
+			alert('잘못된 입력입니다.')
+		}
+	</script>
+</body>
+
+</html>

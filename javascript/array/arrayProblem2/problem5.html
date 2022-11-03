@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let firstNum = parseInt(prompt('첫 번째 입력할 양의 숫자를 입력해주세요.'))
+		let secondNum = parseInt(prompt('두 번째 입력할 양의 숫자를 입력해주세요.'))
+		let thirdNum = parseInt(prompt('세 번째 입력할 양의 숫자를 입력해주세요.'))
+
+		while (isNaN(firstNum) || firstNum < 0) {
+			firstNum = parseInt(prompt('첫 번째 입력할 양의 숫자를 입력해주세요.'))
+		}
+
+		while (isNaN(secondNum) || secondNum < 0) {
+			secondNum = parseInt(prompt('두 번째 입력할 양의 숫자를 입력해주세요.'))
+		}
+
+		while (isNaN(thirdNum) || secondNum < 0) {
+			thirdNum = parseInt(prompt('세 번째 입력할 양의 숫자를 입력해주세요.'))
+		}
+		let sum = firstNum + secondNum + thirdNum;
+		let isOdd = sum % 2 ? true : false
+
+		document.write(`
+		입력한 숫자 : ${firstNum}, ${secondNum}, ${thirdNum}<br>
+		세 수의 합은
+		${sum % 2 ? '홀수' : '짝수'}이고,
+		${isOdd ? `그 합은 ${sum}이다.` : `가장 큰 수는: ${Math.max(firstNum, secondNum, thirdNum)}`}
+		`)
+	</script>
+</body>
+
+</html>

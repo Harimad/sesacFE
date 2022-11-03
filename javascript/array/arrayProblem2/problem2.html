@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let skills = []
+		while (confirm('기술을 추가하시 겠습니까?')) {
+			let skill = prompt('기술을 입력해 주세요. (영어로만 입력해주세요.)')
+			// 유효성 검사 영어만 입력
+			const regex = /^[a-z|A-Z]+$/;
+			if (regex.test(skill)) {
+				skills.push(skill.toLowerCase())
+			}
+		}
+
+		let message = ''
+		if (skills.includes('JavaScript'.toLocaleLowerCase()) && skills.includes('React'.toLocaleLowerCase())) {
+			message = '합격'
+		} else if (skills.includes('JavaScript'.toLocaleLowerCase()) || skills.includes('React'.toLocaleLowerCase())) {
+			message = '예비'
+		} else {
+			message = '탈락'
+		}
+		document.write(`
+		당신의 기술 : ${skills.join(', ')}<br>
+		결과 : ${message}
+		`)
+	</script>
+</body>
+
+</html>
