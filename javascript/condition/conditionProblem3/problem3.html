@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let rsp = ['가위', '바위', '보']
+		let comRsp = rsp[Math.floor(Math.random() * 3)]
+		let userRsp = prompt('가위 바위 보 중 하나를 입력해 주세요.')
+		let userWinValue = {
+			가위: '보',
+			바위: '가위',
+			보: '바위'
+		}
+
+		while (!rsp.includes(userRsp)) {
+			userRsp = prompt('가위 바위 보 중 하나를 입력해 주세요.')
+		}
+
+		let result =
+			comRsp === userRsp
+				? '무승부'
+				: userWinValue[userRsp] === comRsp
+					? '사용자 승리'
+					: '컴퓨터 승리';
+
+		document.write(`
+    컴퓨터는 👉${comRsp}👈를 냈습니다.<br>
+    당신은 👉${userRsp}👈를 냈습니다.<br>
+    결과 : ${result} !<br>
+    `)
+	</script>
+</body>
+
+</html>

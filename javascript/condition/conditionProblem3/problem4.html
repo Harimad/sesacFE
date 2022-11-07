@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let leftCoffee = 5
+		let coffeePrice = 300
+		let userMoney
+		let leftMoney
+
+		while (leftCoffee) {
+			userMoney = parseInt(prompt(`돈을 넣어주세요 (남은커피:${leftCoffee})`))
+
+			while (isNaN(userMoney)) {
+				userMoney = parseInt(prompt(`돈을 넣어주세요 (남은커피:${leftCoffee})`))
+			}
+
+			if (userMoney < 300) {
+				alert('돈이 부족합니다.')
+				break;
+			}
+			leftMoney = userMoney - coffeePrice
+			leftCoffee--
+			alert(`거스름돈 ${leftMoney}원과 커피를 줍니다. (남은커피: ${leftCoffee})`)
+
+			if (leftCoffee === 0) {
+				alert('더 이상 커피가 남아있지 않습니다.')
+			}
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let userMonth = parseInt(prompt('사용 개월 수를 입력해 주세요'))
+		let cardCode = parseInt(prompt('신용 카드 코드를 입력해 주세요'))
+		let cost = 50000
+		let monthSale = 0
+		let cardSale = 0
+		let result = 0
+
+		while (isNaN(userMonth) || userMonth < 0) {
+			userMonth = parseInt(prompt('사용 개월 수를 입력해 주세요'))
+		}
+		while (isNaN(cardCode) || cardCode < 1) {
+			cardCode = parseInt(prompt('신용 카드 코드를 입력해 주세요'))
+		}
+		if (userMonth > 12) {
+			monthSale = cost * 0.2
+		} else if (userMonth > 6) {
+			monthSale = cost * 0.1
+		}
+		if (cardCode === 11) {
+			cardSale = cost * 0.05
+		} else if (cardCode === 12) {
+			cardSale = cost * 0.08
+		} else if (cardCode === 13) {
+			cardSale = cost * 0.12
+		}
+		result = cost - monthSale - cardSale
+
+		document.write(`
+    계약 금액: ${cost}<br>
+    사용 개월 수: ${userMonth}<br>
+    카드 코드 : ${cardCode}<br>
+    최종 요금 : ${result}원
+    `)
+	</script>
+</body>
+
+</html>

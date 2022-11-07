@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		function lottery() {
+			let result = []
+			let lotto
+
+			for (let i = 0; i < 6; i++) {
+				lotto = Math.floor(Math.random() * 45) + 1
+				while (result.includes(lotto)) {
+					lotto = Math.floor(Math.random() * 45) + 1
+				}
+				result.push(lotto)
+			}
+			result.sort((a, b) => a - b)
+			return result
+		}
+
+		document.write(`
+    <h1>로또 1등 당첨 번호</h1>
+    <hr>
+    <h3 style="color:red;">${lottery()}</h3>
+    `)
+	</script>
+</body>
+
+</html>
