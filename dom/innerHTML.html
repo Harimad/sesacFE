@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<p id="firstP" style="color: blue;" onmouseover="change()">
+		여기를<span style="color: red;">클릭하세요</span>
+	</p>
+
+	<script>
+		function change() {
+			let p = document.getElementById('firstP')
+			p.innerHTML = `
+			<img src="http://placekitten.com/200/200"/>나의 고양이 입니다.
+			`
+		}
+	</script>
+</body>
+
+</html>

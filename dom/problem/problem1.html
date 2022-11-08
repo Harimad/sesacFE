@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// 1번 문제
+		function big(str1, str2) {
+			return Math.max(str1, str2)
+		}
+		var b = big("625", "555");
+		document.write("큰수= " + b);
+		document.write(`<br><br><hr><br>`)
+
+
+		// 2번 문제
+		function pr(str, num) {
+			let result = ''
+			for (let i = 0; i < num; i++) {
+				result += str
+			}
+			return document.write(result)
+		}
+
+		pr('%', 5);
+		document.write(`<br><br><hr><br>`)
+
+		// 3번 문제
+		function randomNum() {
+			return Math.floor(Math.random() * 9) + 1
+		}
+
+		let left = randomNum()
+		let right = randomNum()
+		let message = ''
+
+		let userInput = parseInt(prompt(`${left} * ${right} 값은 얼마입니까?`))
+
+		if (userInput === left * right) {
+			message = '정답!'
+		} else {
+			message = '아니오!'
+		}
+		document.write(`${message} ${left}*${right}=${left * right}입니다.`)
+		document.write(`<br><br><hr><br>`)
+
+
+		// 4번 문제
+		let names = ["wonsun", "jaemoonlee", "kitae", "gracehwang"]
+
+		// 4-1
+		function printArr(arr) {
+			document.write(`
+		이름: ${names.join(' ')}
+		`)
+		}
+		printArr(names)
+		document.write('<br>')
+
+		// 4-2
+		function longestItem(arr) {
+			let longest = arr[0]
+			for (let i = 0; i < arr.length; i++) {
+				if (arr[i].length > longest.length) {
+					longest = arr[i]
+				}
+			}
+			return document.write(`가장 긴 이름: ${longest}`)
+		}
+		longestItem(names)
+		document.write('<br>')
+
+		// 4-3
+		function sorting(arr) {
+			return document.write(`증가순 이름: ${arr.sort().join(' ')}`)
+		}
+		sorting(names)
+		document.write(`<br><br><hr><br>`)
+
+	</script>
+</body>
+
+</html>

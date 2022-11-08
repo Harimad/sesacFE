@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<!-- <div class="box"></div>
+	<script>
+		let box = document.querySelector('.box')
+
+		let newDiv = document.createElement('div')
+		newDiv.setAttribute('style', 'background-color: red')
+		newDiv.innerText = 'Hello World'
+		console.log(newDiv)
+		box.appendChild(newDiv)
+	</script> -->
+
+	<div id="parentElement">
+		<span id="childElement">foo bar</span>
+	</div>
+
+	<script>
+		// Create a new, plain <span> element
+		let sp1 = document.createElement("span")
+		sp1.innerText = 'span!'
+
+		// Get the reference element
+		let sp2 = document.getElementById("childElement")
+		// Get the parent element
+		let parentDiv = sp2.parentNode
+
+		// Insert the new element into before sp2
+		parentDiv.insertBefore(sp1, sp2)
+
+		// 결과
+		// span!foo bar
+		// parentDiv.removeChild(sp1)
+		parentDiv.removeChild(sp2)
+	</script>
+</body>
+
+</html>
