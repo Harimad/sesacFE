@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// 1
+		let car = {}
+		car['색상'] = 'red'
+		car['가격'] = 10000,
+			car['번호'] = 12345
+
+		document.write(`
+		<h3>1. 자동차 객체 표현</h3>
+		<hr>
+		자동차 색상 : ${car['색상']}<br>
+		자동차 가격 : ${car['가격']}<br>
+		자동차 번호 : ${car['번호']}<br><br>
+		`)
+
+		// 2
+		let account = {}
+		account.owner = '이성현'
+		account.number = 12345
+		account.balance = 15000
+
+		document.write(`
+		<h3>2. 자동차 객체 표현</h3>
+		<hr>
+		자동차 색상 : ${account.owner}<br>
+		자동차 가격 : ${account.number}<br>
+		자동차 번호 : ${account.balance}<br><br>
+		`)
+
+		// 3
+		let max = Math.max(10, 5, 8, 30)
+		let min = Math.min(10, 5, 8, 30)
+		let num = 3.6432
+		document.write(`
+		<h3>3. Math 객체 표현</h3>
+		<hr>
+		최대값: ${max}<br>
+		최소값: ${min}<br>
+		소수 첫째자리 반올림: ${Math.round(num)}<br>
+		소수 첫째자리 내림: ${Math.floor(num)}<br>
+		소수 첫째자리 올림: ${Math.ceil(num)}<br>
+		원주율: ${Math.PI}<br><br>
+		`)
+
+		//4
+		let person = {
+			firstName: '성현',
+			lastName: '이',
+			sayHello: function () {
+				document.write(`<h3>4. 객체 메서스</h3>Hello!<br>My name is ${this.firstName} ${this.lastName}<br><br>`)
+			}
+		}
+
+		person.sayHello()
+
+		// 5
+		function Fruit(name, color, price) {
+			this.name = name
+			this.color = color
+			this.price = price
+		}
+
+		let apple = new Fruit('사과', 'red', 10000)
+		let orange = new Fruit('오렌지', 'orange', 3000)
+
+		document.write(`
+		<h3>5. 생성자 함수</h3>
+		이름: ${apple.name}<br>
+		색깔: ${apple.color}<br>
+		가격: ${apple.price}<br><hr>
+		이름: ${orange.name}<br>
+		색깔: ${orange.color}<br>
+		가격: ${orange.price}<br><hr>
+		`)
+	</script>
+</body>
+
+</html>
