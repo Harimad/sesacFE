@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let postData
+		let postOneData
+
+		// Read (전체 조회)
+		const getData = async () => {
+			let response = await fetch(`http://localhost:3000/posts`)
+			let data = await response.json()
+			postData = data
+			console.log(postData)
+		}
+		// getData()
+
+		// Read (하나만 조회)
+		const getDataById = async id => {
+			let res = await fetch(`http://localhost:3000/posts/${id}`)
+			let data = await res.json()
+			postOneData = data
+			console.log(postOneData)
+		}
+		// getDataById(1)
+
+
+		// Create (생성)
+		const createData = async (data = {}) => {
+			let res = await fetch(`http://localhost:3000/posts/`,
+				{
+					method: 'POST', // *GET, POST, PUT, DELETE 등
+					headers: {
+						"Content-Type": 'application/json',
+						// 'Content-Type': 'application/x-www-form-urlencoded',
+					},
+					body: JSON.stringify(data),
+				})
+			return res.json();
+		}
+
+		// createData({
+		// 	id: 16,
+		// 	title: "json-server15",
+		// 	author: "typicode15"
+		// })
+
+
+		// Update (수정)
+		const updateData = async (data = {}) => {
+			let res = await fetch(`http://localhost:3000/posts/${data.id}`,
+				{
+					method: 'PUT', // *GET, POST, PUT, DELETE 등
+					headers: {
+						'Content-Type': 'application/json',
+						// 'Content-Type': 'application/x-www-form-urlencoded',
+					},
+					body: JSON.stringify(data),
+				})
+			return res.json();
+		}
+		// updateData({
+		// 	id: 1,
+		// 	title: "json-server hahaha",
+		// 	author: "typicode1 hahaha"
+		// })
+
+
+		// Delete (삭제)
+		const deleteData = async (id) => {
+			let res = await fetch(`http://localhost:3000/posts/${id}`,
+				{
+					method: 'DELETE',
+				})
+			return res.json();
+		}
+		// deleteData(13)
+	</script>
+</body>
+
+</html>
