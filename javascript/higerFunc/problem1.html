@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// 1
+		document.write(`<h1>1</h1>`)
+
+		let fruits = [
+			{
+				name: 'apple',
+				number: 3,
+				price: 1000
+			},
+			{
+				name: 'banana',
+				number: 5,
+				price: 500
+			},
+			{
+				name: 'pineapple',
+				number: 7,
+				price: 2000
+			}
+		]
+
+		function getFruitInfo(arr) {
+			let one = arr.find(fruit => fruit.name === 'banana')
+
+			document.write(`
+			이름: ${one.name}<br>
+			수량: ${one.number}<br>
+			가격: ${one.price}<br><br><hr>
+			`)
+		}
+		getFruitInfo(fruits)
+
+
+		// 2
+		document.write(`<h1>2</h1>`)
+
+		const array = ['javascript', 'css', 'react', 'html', 'mysql', 'mongodb']
+		const filteredArray = array.filter(item => item.length > 4)
+		console.log(filteredArray)
+		filteredArray.forEach(item => document.write(`${item}: ${item.length}<br>`))
+
+
+		// 3
+		document.write(`<h1>3</h1>`)
+
+		const numbers = [5, 19, 42, 36, 70]
+		let result = numbers.map(number => number * 2)
+		result = result.map(number => {
+			return number % 3 ? number : number * 2
+		})
+		document.write(`<br>결과: ${result}<br>`)
+
+
+		// 4
+		document.write(`<h1>4</h1>`)
+		const numbers2 = [5, 10, 15, 20, 25, 30]
+		numbers2.forEach((item, idx, arr) => {
+			if (item % 2 === 0) arr.splice(idx, 1)
+		})
+		document.write(`배열의 남은 요소: [${numbers2}]<br>`)
+
+
+		// 5
+		document.write(`<h1>5</h1>`)
+
+		class Users {
+			constructor() {
+				this.members = [
+					{ id: 1, name: "soo", addr: "seoul" },
+					{ id: 2, name: "Lee", addr: "busan" },
+					{ id: 3, name: "Kim", addr: "seoul" },
+				];
+			}
+		}
+
+		let users = new Users
+		let filteredUser = users.members.filter(user => user.id === 1)[0]
+		document.write(`
+		< ID가 1인 고객 정보><br><hr>
+		이름: ${filteredUser.name}<br>
+		지역: ${filteredUser.addr}<br><hr>
+		`)
+
+		let filteredUser2 = users.members.filter(user => user.addr == 'seoul')
+		console.log(filteredUser2)
+		filteredUser2.forEach(user => {
+			return document.write(`
+			<서울 고객 정보><br>
+			ID: ${user.id}<br>
+			이름: ${user.name}<br>
+			지역: ${user.addr}<br><hr>
+			`)
+		})
+
+
+		// 6
+		document.write(`<h1>6</h1>`)
+
+		const person = { name: "soo", age: 20, addr: "seoul", };
+		for (const key in person) { document.write(`${key} : ${person[key]}<br>`); }
+
+
+
+		// 7
+		document.write(`<h1>7</h1>`)
+
+		const array7 = [10, 20, 30, 40, 50];
+		for (const item of array7) { document.write(`${item} `); }
+		const say = "Hello";
+		for (const item of say) { document.write(`${item} `); }
+
+
+		// 8
+		const map = new Map();
+		const lee = { name: "Lee" }; const kim = { name: "Kim" };
+		console.log(map);
+		console.log(map.get(lee));
+		console.log(map.has(kim)); console.log(map.has("soo"));
+		map.delete(lee); map.clear();
+		console.log(map);
+
+
+
+		// 9
+		document.write(`<h1>9</h1>`)
+
+		const map2 = new Map()
+
+		const park = { name: "Park" }
+		const song = { name: "Song" }
+
+		map2.set(park, 'developer')
+		map2.set(song, 'designer')
+
+		document.write(`<br>Map 객체의 key<br>`)
+
+		map2.forEach((value, key) => {
+			document.write(`${JSON.stringify(key)}<br>`)
+		})
+
+		document.write(`<br>Map 객체의 value<br>`)
+
+		map2.forEach((value, key) => {
+			document.write(`${value}<br>`)
+		})
+	</script>
+</body>
+
+</html>
