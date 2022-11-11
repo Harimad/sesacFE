@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h3>계산기 만들기</h3>
+	<hr>
+	<p>수식을 입력하고 &lt;Enter&gt;를 입력하세요</p>
+
+	<label for="userInput1">식</label>
+	<input type="text" id="userInput1">
+	<label for="userInput2">값</label>
+	<input type="text" id="userInput2">
+
+	<script>
+		const $userInput1 = document.querySelector('#userInput1')
+		const $userInput2 = document.querySelector('#userInput2')
+
+		$userInput2.readOnly = true
+
+		$userInput1.addEventListener('keyup', e => {
+			let userInput = $userInput1.value
+			if (e.keyCode === 13) {
+				$userInput2.value = eval(userInput)
+
+				$userInput1.value = ''
+				$userInput1.focus()
+			}
+		})
+	</script>
+</body>
+
+</html>

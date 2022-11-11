@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Select</title>
+</head>
+
+<body>
+	<div id="selectedItem">
+		<input type='radio' name="cat" id="cat1" value="http://placekitten.com/200/201"></input>
+		<label for="cat1">고양이1</label>
+		<input type='radio' name="cat" id="cat2" value="http://placekitten.com/201/200"></input>
+		<label for="cat2">고양이2</label>
+		<input type='radio' name="cat" id="cat3" value="http://placekitten.com/199/200"></input>
+		<label for="cat3">고양이3</label>
+	</div>
+
+	<div>
+		<p>이미지</p>
+		<img src="" id="img">
+	</div>
+
+	<script>
+		let selectItem = document.querySelector('#selectedItem')
+		let img = document.querySelector('#img')
+
+		selectItem.addEventListener('change', e => {
+			img.src = e.target.value
+		})
+	</script>
+</body>
+
+</html>

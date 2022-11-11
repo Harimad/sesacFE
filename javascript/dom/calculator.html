@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h3>onclck, 계산기 만들기</h3>
+	<hr>
+	<p>계산하고자 하는 수식을 입력하고 계산 버튼을 눌러봐요</p>
+	<div>
+		<label for="userInput">식</label>
+		<input type="text" id="userInput">
+		<br>
+		<label for="result">결과</label>
+		<input type="text" id="result">
+		<button id="calcBtn">계산</button>
+		<button id="resetBtn">계산</button>
+	</div>
+
+	<script>
+		let $calcBtn = document.querySelector('#calcBtn')
+		let $resetBtn = document.querySelector('#resetBtn')
+		let $userInput = document.querySelector('#userInput')
+		let $result = document.querySelector('#result')
+
+		$result.readOnly = true
+
+		const clearInput = () => {
+			$userInput.value = ''
+			$result.value = ''
+		}
+
+		$calcBtn.addEventListener('click', () => {
+			if (!$userInput.value || !$userInput.value.trim()) {
+				clearInput()
+				$userInput.focus()
+				return
+			}
+			let result = eval($userInput.value)
+			console.log(result)
+			$result.value = result
+		})
+		$resetBtn.addEventListener('click', clearInput)
+
+	</script>
+</body>
+
+</html>

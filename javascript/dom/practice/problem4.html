@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h3>innerHTML</h3>
+	<h3></h3>
+	<p>이번 여름에는 어디로 여행을 갈까요?</p>
+
+	<script>
+		const p = document.querySelector('p')
+		p.addEventListener('click', () => {
+			let userInput = prompt('HTML 텍스트 혹은 그냥 텍스를 입력하세요.')
+			p.innerHTML = userInput
+		})
+	</script>
+</body>
+
+</html>

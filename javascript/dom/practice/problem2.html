@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h3>옵션 선택으로 사이트 접속</h3>
+	<h4>옵션 선택마다 새 윈도우에 접속합니다.</h4>
+	<hr>
+	<p>접속할 사이트</p>
+	<select id="select">
+		<option value="https://www.naver.com">네이버</option>
+		<option value="https://www.google.com">구글</option>
+	</select>
+
+	<script>
+		const select = document.querySelector('#select')
+
+		select.addEventListener('change', e => {
+			let index = e.target.options.selectedIndex
+			let url = e.target.options[index].value
+			window.open(url, "left=500, top=400, width=500, height=400")
+		})
+
+	</script>
+</body>
+
+</html>

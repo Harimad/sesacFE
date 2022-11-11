@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h3>포커스와 onblur, onfocus</h3>
+	<hr>
+	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque eum blanditiis incidunt dolores laboriosam
+		quisquam hic quasi magnam, minima, a veniam soluta? Ex autem eveniet velit nihil deleniti debitis placeat?</p>
+
+	<script>
+		window.addEventListener('focus', e => {
+			document.querySelector('body').style.backgroundColor = 'white'
+		})
+		window.addEventListener('blur', e => {
+			document.querySelector('body').style.backgroundColor = 'gray'
+
+		})
+	</script>
+</body>
+
+</html>

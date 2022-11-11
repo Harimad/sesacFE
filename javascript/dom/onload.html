@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body onload="init()">
+	<h3>DOM 객체의 이벤트 리스너 프로퍼티에 함수 등록</h3>
+	<hr>
+	<p id="p">마우스 올리면 orange 색으로 변경</p>
+
+	<script>
+		let p
+
+		// 방법 1
+		// function init() {
+		// 	p = document.getElementById('p')
+		// 	p.onmouseover = over
+		// 	p.onmouseout = out
+		// }
+
+		// 방법 2 (addEventListener)
+		// function init() {
+		// 	p = document.getElementById('p')
+		// 	p.addEventListener('mouseover', over)
+		// 	p.addEventListener('mouseout', out)
+		// }
+
+		// function over() {
+		// 	p.style.backgroundColor = 'orange'
+		// }
+		// function out() {
+		// 	p.style.backgroundColor = 'white'
+		// }
+
+		// 방법 3 (익명함수 사용)
+		function init() {
+			p = document.getElementById('p')
+			p.onmouseover = function () {
+				this.style.backgroundColor = 'orange'
+			}
+			p.onmouseout = function () {
+				this.style.backgroundColor = ''
+			}
+		}
+	</script>
+</body>
+
+</html>

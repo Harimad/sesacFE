@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h3>계산해봅시다</h3>
+	<hr>
+	<p><span id="cal1">2 + 4</span> = <span id="answer1">답</span></p>
+	<p><span id="cal2">4 * 20 + 64</span> = <span id="answer2">답</span></p>
+	<p><span id="cal3">20/5-8*2</span> = <span id="answer3">답</span></p>
+
+	<script>
+		let $cal1 = document.querySelector('#cal1')
+		let $cal2 = document.querySelector('#cal2')
+		let $cal3 = document.querySelector('#cal3')
+		let $answer1 = document.querySelector('#answer1')
+		let $answer2 = document.querySelector('#answer2')
+		let $answer3 = document.querySelector('#answer3')
+
+
+		$answer1.addEventListener('click', () => {
+			$answer1.innerText = eval($cal1.innerText)
+		})
+
+		$answer2.addEventListener('click', () => {
+			$answer2.innerText = eval($cal2.innerText)
+		})
+
+		$answer3.addEventListener('click', () => {
+			$answer3.innerText = eval($cal3.innerText)
+		})
+	</script>
+</body>
+
+</html>

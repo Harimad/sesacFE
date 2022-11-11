@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h3>span 태그에만onmouseover/onmouseout</h3>
+	<hr>
+	<p>
+		span 태그에대해서만
+		<span>마우스</span>
+		가올라올때밑줄이그어지고
+		<span>마우스</span>
+		가내려갈때밑줄이사라지도록
+		<span>자바스크립트코드</span>
+		를작성한다.
+	</p>
+
+	<script>
+		let $spans = document.querySelectorAll('span')
+		$spans.forEach(span => {
+			span.addEventListener('mouseover', e => {
+				e.target.style.textDecoration = 'underline'
+			})
+			span.addEventListener('mouseout', e => {
+				e.target.style.textDecoration = ''
+			})
+		})
+	</script>
+</body>
+
+</html>
