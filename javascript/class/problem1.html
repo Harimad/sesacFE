@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// 1
+		class GoodStock {
+			constructor(code, stockNum) {
+				this.code = code
+				this.stockNum = stockNum
+			}
+			set addStock(stockNum) {
+				this.stockNum += stockNum
+			}
+			get getInfo() {
+				return (`
+    상품코드: ${this.code}
+    재고수량: ${this.stockNum}
+    `)
+			}
+		}
+
+		let good1 = new GoodStock(
+			prompt('상품코드를 입력하세요.'),
+			parseInt(prompt('재고수량을 입력하세요.'))
+		)
+
+		alert(good1.getInfo)
+		good1.addStock = parseInt(prompt('추가할 수량을 입력하세요'))
+		alert(good1.getInfo)
+
+
+		// 2
+		class Account {
+			constructor(accountNo, ownerName, balance) {
+				this.accountNo = accountNo
+				this.ownerName = ownerName
+				this.balance = balance
+			}
+			set deposit(num) {
+				this.balance += num
+			}
+			set widthdraw(num) {
+				this.balance -= num
+			}
+			get displayAccount() {
+				return (document.write(`
+    계좌번호: ${this.accountNo}<br>
+    예금주 이름: ${this.ownerName}<br>
+    잔액: ${this.balance}<br><hr>
+    `))
+			}
+		}
+
+		let obj1 = new Account('111-222-33333333', 'Kim', 50000)
+		let obj2 = new Account('555-666-77777777', 'Son', 100000)
+
+		obj1.deposit = 100000
+		obj2.widthdraw = 30000
+
+		obj1.displayAccount
+		obj2.displayAccount
+
+
+		// 3
+		class FourCal {
+			constructor(num1, num2) {
+				this.num1 = num1
+				this.num2 = num2
+			}
+			get add() {
+				return this.num1 + this.num2
+			}
+			get sub() {
+				return this.num1 - this.num2
+			}
+			get mul() {
+				return this.num1 * this.num2
+			}
+			get div() {
+				return this.num1 / this.num2
+			}
+			get info() {
+				return (document.write(`
+    두 수를 더한 값: ${this.add}<br>
+    두 수를 뺀 값: ${this.sub}<br>
+    두 수를 곱한 값: ${this.mul}<br>
+    두 수를 나눈 값: ${this.div}<br><hr>
+    `))
+			}
+		}
+
+		let fourCal = new FourCal(
+			parseInt(prompt('첫 번째 숫자를 입력하세요:')),
+			parseInt(prompt('두 번째 숫자를 입력하세요:'))
+		)
+		fourCal.info
+
+
+		// 4
+		class Dice {
+			constructor(state) {
+				this.state = state
+				this.number = 0
+			}
+			get roll() {
+				this.state = Math.floor(Math.random() * 6) + 1
+				this.number++
+			}
+			get display() {
+				return (document.write(`
+    ${this.number}회차 돌린 주사위 상태는 : ${this.state}<br><br>
+    `))
+			}
+
+		}
+
+		let dice = new Dice(1)
+
+		function rollDice(obj) {
+			obj.roll
+			obj.display
+		}
+
+		for (let i = 0; i < 10; i++) {
+			rollDice(dice)
+		}
+
+	</script>
+</body>
+
+</html>
