@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JSON</title>
+</head>
+
+<body>
+	<script>
+		// JSON.stringify() - 1
+		const obj = {
+			name: 'harimad',
+			age: '10',
+			alive: true,
+			hobby: ['space', 'ocean']
+		}
+
+		const json = JSON.stringify(obj)
+		console.log(json) // {"name":"harimad","age":"10","alive":true,"hobby":["space","ocean"]}
+
+
+		// JSON.stringify() - 2
+		const person = [
+			{ id: 1, name: "Kim", age: 20 },
+			{ id: 2, name: "Lee", age: 30 },
+			{ id: 3, name: "Park", age: 40 }
+		];
+		const json2 = JSON.stringify(person);
+		console.log(json2) // [{"id":1,"name":"Kim","age":20},{"id":2,"name":"Lee","age":30},{"id":3,"name":"Park","age":40}]
+
+
+		// JSON.parse() - 1
+		const obj3 = {
+			name: "Soo",
+			age: 20,
+			alive: true,
+			hobby: ["traveling", "piano"]
+		};
+		// 직렬화
+		const json3 = JSON.stringify(obj3);
+		console.log(json3) // {"name":"Soo","age":20,"alive":true,"hobby":["traveling","piano"]}
+		// 역직렬화
+		const parsed = JSON.parse(json3);
+		console.log(parsed); // {name: 'Soo', age: 20, alive: true, hobby: Array(2)}
+
+
+		// JSON.parse() - 2
+		const person2 = [
+			{ id: 1, name: "Soo", age: 20 },
+			{ id: 2, name: "Kim", age: 30 },
+			{ id: 3, name: "Lee", age: 40 }
+		];
+		// 직렬화
+		const json4 = JSON.stringify(person);
+		// 역직렬화
+		const parsed2 = JSON.parse(json4);
+		console.log(parsed2); // (3) [{…}, {…}, {…}]
+	</script>
+</body>
+
+</html>

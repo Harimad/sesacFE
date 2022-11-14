@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- jquery cdn -->
+	<!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+	<!-- FullPage Plugin CSS -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" /> -->
+	<!-- FullPage Plugin JS -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"></script> -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+		integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css"
+		integrity="sha512-/AilQf/shuEGfh8c3DoIqcIqHZCKpiImSyt+fxIKJphHiNa6QMPb6AbDly6rkjmGr/5OZd35JtvVkbEKnCZO+A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"
+		integrity="sha512-0xW5KFMtT462F65vVvIejNawM1U2Fp/yhItmQVFUwdYP+R9tQFCn4QtLEhkp6RoGovZ6YCvbxy+GVCtGv0+nvA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+	<style>
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
+		header {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			background: pink;
+			z-index: 999;
+		}
+
+		header nav ul {
+			display: flex;
+			justify-content: center;
+		}
+
+		header nav ul li {
+			margin: 0 30px;
+			list-style: none;
+		}
+
+	</style>
+</head>
+
+<body>
+	<!-- menu -->
+	<header>
+		<nav>
+			<ul>
+				<li data-menuanchor="menu1"><a href="#menu1">Slide1</a></li>
+				<li data-menuanchor="menu2"><a href="#menu2">Slide2</a></li>
+				<li data-menuanchor="menu3"><a href="#menu3">Slide3</a></li>
+				<li data-menuanchor="menu4"><a href="#menu4">Slide4</a></li>
+				<li data-menuanchor="menu5"><a href="#menu5">Slide5</a></li>
+				<li data-menuanchor="menu5"><a href="#footer">Footer</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- fullpage -->
+	<div id="fullpage">
+		<div class="section">
+			<h1>Slide1</h1>
+		</div>
+		<div class="section">
+			<h1>Slide2</h1>
+		</div>
+		<div class="section">
+			<h1>Slide3</h1>
+		</div>
+		<div class="section">
+			<h1>Slide4</h1>
+		</div>
+		<div class="section">
+			<h1>Slide5</h1>
+		</div>
+
+		<footer class="section fp-auto-height">
+			<!-- 영역 컨텐츠에 맞게 높이 설정: fp-auto-height -->
+			<h1>footer</h1>
+		</footer>
+	</div>
+
+	<script>
+		$(document).ready(function () {
+			$('#fullpage').fullpage({
+				//옵션
+				autoScrolling: true,
+				scrollHorizontally: true,
+
+				// 여기다 필요한 옵션 추가
+				navigation: true,
+				navigationPosition: 'right',
+
+				// 링크
+				anchors: ['menu1', 'menu2', 'menu3', 'menu4', 'menu5', 'footer'],
+
+				sectionsColor: ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+			})
+		})
+	</script>
+</body>
+
+</html>

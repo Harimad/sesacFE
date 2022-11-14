@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		table {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		thead {
+			background-color: cyan;
+		}
+
+		th,
+		td {
+			border: 1px solid black;
+			padding: 10px;
+		}
+
+		tr:nth-child(2n) {
+			background-color: lightgrey;
+		}
+
+		tr:hover {
+			background-color: beige;
+		}
+
+		.form-container {
+			border: 1px solid black;
+			width: 500px;
+			margin: 1rem auto;
+			padding: 20px;
+			border-radius: 20px;
+		}
+
+		.input-box {
+			display: flex;
+			justify-content: space-around;
+			margin-bottom: 10px;
+		}
+
+		.input-box label {
+			width: 50%;
+		}
+
+		.input-box input {
+			width: 50%;
+		}
+
+
+		.submitBtn {
+			background-color: bisque;
+			border: none;
+			padding: 1rem;
+			font-size: 1.5rem;
+			border-radius: 1rem;
+			width: 100%;
+		}
+
+		.submitBtn:hover {
+			background-color: coral;
+		}
+
+	</style>
+</head>
+
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Full Name</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Web Site</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+
+	<!-- <div class="form-container">
+		<div class="input-box">
+			<label for="userName">Enter your userName: </label>
+			<input type="text" name="userName" id="userName" required autocomplete="off">
+		</div>
+		<div class="input-box">
+			<label for="userEmail">Enter your email: </label>
+			<input type="email" name="userEmail" id="userEmail" required autocomplete="off">
+		</div>
+		<div class="input-box">
+			<label for="userPhone">Enter your userPhone: </label>
+			<input type="tel" name="userPhone" id="userPhone" required autocomplete="off">
+		</div>
+		<div class="input-box">
+			<label for="userWebsite">Enter your userWebsite: </label>
+			<input type="text" name="userWebsite" id="userWebsite" required autocomplete="off">
+		</div>
+		<div class="btn-box">
+			<button id="submitBtn" class="submitBtn">전송</button>
+		</div>
+	</div> -->
+
+	<!-- Form -->
+	<form class="form-container">
+		<div class="input-box">
+			<label for="userName">Enter your userName: </label>
+			<input type="text" name="name" id="userName" required autocomplete="off">
+		</div>
+		<div class="input-box">
+			<label for="userEmail">Enter your email: </label>
+			<input type="email" name="email" id="userEmail" required autocomplete="off">
+		</div>
+		<div class="input-box">
+			<label for="userPhone">Enter your userPhone: </label>
+			<input type="tel" name="phone" id="userPhone" required autocomplete="off">
+		</div>
+		<div class="input-box">
+			<label for="userWebsite">Enter your userWebsite: </label>
+			<input type="text" name="website" id="userWebsite" required autocomplete="off">
+		</div>
+		<div class="btn-box">
+			<button type="submit" id="submitBtn" class="submitBtn">전송</button>
+		</div>
+	</form>
+	<script src="jsonserver.js"></script>
+</body>
+
+</html>

@@ -16,6 +16,8 @@
 		// Read (전체 조회)
 		const getData = async () => {
 			let response = await fetch(`http://localhost:3000/posts`)
+			console.log(response)
+
 			let data = await response.json()
 			postData = data
 			console.log(postData)
@@ -29,17 +31,16 @@
 			postOneData = data
 			console.log(postOneData)
 		}
-		// getDataById(1)
+		getDataById(1)
 
 
 		// Create (생성)
 		const createData = async (data = {}) => {
-			let res = await fetch(`http://localhost:3000/posts/`,
+			let res = await fetch(`http://localhost:5050/posts/`,
 				{
 					method: 'POST', // *GET, POST, PUT, DELETE 등
 					headers: {
 						"Content-Type": 'application/json',
-						// 'Content-Type': 'application/x-www-form-urlencoded',
 					},
 					body: JSON.stringify(data),
 				})
@@ -60,7 +61,6 @@
 					method: 'PUT', // *GET, POST, PUT, DELETE 등
 					headers: {
 						'Content-Type': 'application/json',
-						// 'Content-Type': 'application/x-www-form-urlencoded',
 					},
 					body: JSON.stringify(data),
 				})
@@ -81,7 +81,7 @@
 				})
 			return res.json();
 		}
-		// deleteData(13)
+		deleteData(13)
 	</script>
 </body>
 
