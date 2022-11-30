@@ -1,0 +1,33 @@
+.container {
+  border: 1px solid black;
+  width: 400px;
+  height: 500px;
+  background-size: cover;
+  background-color: pink;
+}
+.container .header {
+  font-size: 60px;
+  font-family: "Helvetica";
+  color: pink;
+  background-color: blueviolet;
+}
+.container ul {
+  list-style: none;
+}
+.container ul li {
+  color: pink;
+  padding: 20px;
+}
+.container ul li:last-child {
+  color: blue;
+}
+
+.parent-small {
+  font-size: 5px;
+}
+.parent-medium {
+  font-size: 20px;
+}
+.parent-large {
+  font-size: 60px;
+}/*# sourceMappingURL=FirstSassComponent.css.map */

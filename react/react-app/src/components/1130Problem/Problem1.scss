@@ -1,0 +1,32 @@
+@mixin box($size, $color) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+
+  .child1 {
+    @include box(50px, red);
+  }
+  .child2 {
+    @include box(100px, orange);
+  }
+  .child3 {
+    @include box(150px, yellow);
+  }
+  .child4 {
+    @include box(200px, green);
+  }
+  .child5 {
+    @include box(250px, blue);
+  }
+  .child6 {
+    @include box(300px, navy);
+  }
+  .child7 {
+    @include box(350px, purple);
+  }
+}

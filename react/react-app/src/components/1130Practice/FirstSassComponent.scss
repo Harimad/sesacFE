@@ -1,0 +1,49 @@
+$main-font: 'Helvetica';
+$width: 400px;
+$height: 500px;
+$primary-color: black;
+
+@mixin title($font) {
+  font-size: 60px;
+  font-family: $font;
+  color: $primary-color;
+  background-color: blueviolet;
+}
+
+.container {
+  border: 1px solid black;
+  width: $width;
+  height: $height;
+  // background: url('http://placekitten.com/500/500');
+  background-size: cover;
+  $primary-color: pink !global;
+  background-color: $primary-color;
+
+  .header {
+    @include title($main-font);
+  }
+
+  ul {
+    list-style: none;
+    li {
+      color: $primary-color;
+      padding: 20px;
+
+      &:last-child {
+        color: blue;
+      }
+    }
+  }
+}
+
+.parent {
+  &-small {
+    font-size: (10px / 2);
+  }
+  &-medium {
+    font-size: 10px + 10px;
+  }
+  &-large {
+    font-size: 30px * 2;
+  }
+}
