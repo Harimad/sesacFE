@@ -1,0 +1,15 @@
+.container {
+  background: black;
+  padding: 1rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.span {
+  color: pink;
+}
+
+// 전역 스타일
+:global .span {
+  color: yellow;
+}
