@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
-import ListItem from './ListItem'
-import './List.scss'
-import Form from 'react-bootstrap/Form'
 import Table from 'react-bootstrap/Table'
+import './List.scss'
+import ListItem from './ListItem'
 import NoContents from './NoContents'
+import MonthForm from './MonthForm'
 
 const List = props => {
   const [copyState, setCopyState] = useState([...props.state])
@@ -53,34 +53,12 @@ const List = props => {
 
   return (
     <>
-      <div className="monthContainer mt-5">
-        <p className="total">
-          총 비용: <span>{totalPrice}</span>원
-        </p>
-        <Form.Select
-          aria-label="Default select example"
-          id="monthFilter"
-          name="filter"
-          className="month"
-          onChange={onFilterHandler}
-          ref={monthTag}
-          required
-        >
-          <option value="all">All</option>
-          <option value="0">1월</option>
-          <option value="1">2월</option>
-          <option value="2">3월</option>
-          <option value="3">4월</option>
-          <option value="4">5월</option>
-          <option value="5">6월</option>
-          <option value="6">7월</option>
-          <option value="7">8월</option>
-          <option value="8">9월</option>
-          <option value="9">10월</option>
-          <option value="10">11월</option>
-          <option value="11">12월</option>
-        </Form.Select>
-      </div>
+      <MonthForm
+        totalPrice={totalPrice}
+        onFilterHandler={onFilterHandler}
+        monthTag={monthTag}
+      ></MonthForm>
+
       <Table striped bordered hover className="mt-2">
         <thead className="thead">
           <tr>
