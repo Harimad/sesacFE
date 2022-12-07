@@ -1,0 +1,21 @@
+.monthContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.monthContainer .total {
+  flex: 1;
+  padding: 10px;
+  margin-bottom: 0;
+}
+.monthContainer .month {
+  flex: 1;
+}
+
+.thead th {
+  padding: 10px;
+}
+
+.body td {
+  padding: 10px;
+}/*# sourceMappingURL=List.css.map */
