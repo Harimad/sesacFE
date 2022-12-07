@@ -1,0 +1,17 @@
+.container {
+  background-color: black;
+  padding: 1rem;
+  font-size: 2rem;
+  color: white;
+}
+.container.test {
+  border: 10px solid aqua;
+}
+
+.globalBtn {
+  background-color: pink;
+}
+
+:global .globalBtn {
+  background-color: yellow;
+}/*# sourceMappingURL=GlobalStyle1.module.css.map */

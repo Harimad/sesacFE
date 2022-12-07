@@ -1,0 +1,14 @@
+.container {
+  background: black;
+  padding: 1rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.span {
+  color: pink;
+}
+
+:global .span {
+  color: yellow;
+}/*# sourceMappingURL=CSSModule.module.css.map */
