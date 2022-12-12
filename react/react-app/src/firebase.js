@@ -2,7 +2,6 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
 
-console.log(process.env.REACT_APP_FIREBASE_PROJECT_ID)
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
@@ -10,8 +9,9 @@ const firebaseConfig = {
   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
   storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
   appId: process.env.REACT_APP_FIREBASE_WEB_APP_ID,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  // messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
 }
+// console.log(firebaseConfig)
 
 // Firebase 초기화
 const app = initializeApp(firebaseConfig)
@@ -19,7 +19,7 @@ const app = initializeApp(firebaseConfig)
 // Firebase 객체 저장
 export const db = getFirestore(app)
 
-// ----------------------------------------------------------------------
+//----------------------------------------------------------------------
 // 2
 
 // import { initializeApp } from 'firebase/app'

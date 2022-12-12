@@ -1,92 +1,58 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { db } from './firebase'
-import {
-  collection,
-  doc,
-  getDocs,
-  getDoc,
-  query,
-  where,
-  setDoc,
-  updateDoc,
-  deleteDoc,
-  deleteField,
-} from 'firebase/firestore'
+import { collection, doc, getDocs, setDoc } from 'firebase/firestore'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Root from './components/1212Problem/Root'
+import Home from './components/1212Problem/Home'
+import Error from './components/1212Problem/Error'
+import Products from './components/1212Problem/Products'
+import Product from './components/1212Problem/Product'
 
 const App = () => {
   const fruitCollection = collection(db, 'fruits')
+  const [fruits, setFruits] = useState([])
 
-  // useEffect(() => {
-
-  // DB 연결 확인
-  console.log(db)
-
-  async function getFruits1() {
-    const data = await getDocs(fruitCollection)
-    console.log(data)
-  }
-
-  async function getFruits2() {
-    const docRef = doc(fruitCollection, '수박')
-    const data = await getDoc(docRef)
-    if (data.exists()) {
-      console.log('결과: ', data.data()) // 결과:  {taste: '달콤', color: '빨강', season: '여름', price: '12000'}
-    } else {
-      console.log('결과 없음')
+  // Firebase 데이터 조회
+  useEffect(() => {
+    async function getFruits() {
+      const data = await getDocs(fruitCollection)
+      setFruits(data.docs)
     }
-  }
+    getFruits()
+  }, [])
 
-  async function getFruits3() {
-    const data1 = query(fruitCollection, where('season', '==', '가을'))
-    const data2 = query(fruitCollection, where('price', '>', 6000))
-    const querySnapshot = await getDocs(data2)
-
-    querySnapshot.forEach(doc => {
-      console.log(doc.id, ' : ', doc.data())
+  // 수정
+  async function makeFruit(fruit) {
+    await setDoc(doc(fruitCollection), {
+      name: fruit.name,
+      season: fruit.season,
+      color: fruit.color,
+      taste: fruit.taste,
+      count: fruit.count,
+      price: fruit.price,
     })
   }
 
-  // getFruits1()
-  // getFruits2()
-  // getFruits3()
-  // }, [])
+  // 라우터 정의
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Root />,
+      errorElement: <Error />,
+      children: [
+        {
+          index: true,
+          element: <Home makeFruit={makeFruit} />,
+        },
+        {
+          path: '/products',
+          element: <Products fruits={fruits} />,
+        },
+        { path: '/products/:productId', element: <Product /> },
+      ],
+    },
+  ])
 
-  async function setFruit() {
-    await setDoc(doc(fruitCollection, '바나나'), {
-      season: '봄',
-      color: '노랑',
-      taste: '달콤',
-      price: 4000,
-    })
-  }
-
-  async function updateFruit() {
-    await updateDoc(doc(fruitCollection, '바나나'), {
-      season: '봄',
-      color: '노랑',
-      taste: '달콤',
-      price: 4002,
-      count: 10,
-    })
-  }
-
-  async function deleteFruit() {
-    await deleteDoc(doc(fruitCollection, '바나나'))
-  }
-
-  async function deleteFieldFruit() {
-    await updateDoc(doc(fruitCollection, '바나나'), {
-      count: deleteField(),
-    })
-  }
-
-  return (
-    <div>
-      <button onClick={setFruit}>과일 추가</button>
-      <button onClick={updateFruit}>과일 수정</button>
-      <button onClick={deleteFruit}>과일 삭제</button>
-      <button onClick={deleteFieldFruit}>특정 필드 삭제</button>
-    </div>
-  )
+  return <RouterProvider router={router} />
 }
 export default App
